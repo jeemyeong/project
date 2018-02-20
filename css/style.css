@@ -114,8 +114,13 @@ legend, .readable-hidden {
   .member li:nth-child(2) {
     background: lime;
     height: 50px;
+    float: right;
   }
   .member li:nth-child(3) {
     background: orange;
+    float: right;
+  }
+  .search-form {
+    clear: both;
   }
 }
