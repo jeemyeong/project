@@ -103,7 +103,6 @@ legend, .readable-hidden {
   }
   .member {
     border: 2px solid black;
-    overflow: hidden;
   }
   .member li {
     /* display: inline-block; */
@@ -114,12 +113,17 @@ legend, .readable-hidden {
   }
   .member li:nth-child(2) {
     background: lime;
-    height: 50px;
-    float: right;
+    float: left;
   }
   .member li:nth-child(3) {
     background: orange;
-    float: right;
+    float: left;
+  }
+  .clearfix::after{
+    content: "";
+    background: pink;
+    clear: both;
+    display: block;
   }
   .search-form {
     margin-top: 20px;
