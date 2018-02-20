@@ -128,5 +128,9 @@ legend, .readable-hidden {
   }
   .search-form {
     margin-top: 20px;
+    clear: both;
+  }
+  #search {
+    width: calc(100% - 50px);
   }
 }
