@@ -103,6 +103,7 @@ legend, .readable-hidden {
   }
   .member {
     border: 2px solid black;
+    overflow: hidden;
   }
   .member li {
     /* display: inline-block; */
@@ -121,6 +122,6 @@ legend, .readable-hidden {
     float: right;
   }
   .search-form {
-    clear: both;
+    margin-top: 20px;
   }
 }
