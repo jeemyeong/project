@@ -103,6 +103,7 @@ legend, .readable-hidden {
   }
   .member {
     border: 2px solid black;
+    float: right;
   }
   .member li {
     /* display: inline-block; */
