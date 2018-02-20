@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css");
+
+/* 스타일 초기화 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ul {
+  list-style-type: none;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 숨김 콘텐츠 */
+legend, .readable-hidden {
+  background: yellow;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* 레이아웃 */
+.container {
+  background-color: silver;
+}
+
+.header {
+  background-color: yellow;
+}
+
+.logo {
+  background: aqua;
+}
+.member {
+  background: tomato;
+}
+.search-form {
+  background: teal;
+}
+.navigation {
+  background-color: pink;
+}
+.main-content {
+  background-color: lime;
+}
+.slogan {
+  background-color: skyblue;
+}
+.footer {
+  background-color: orange;
+}
+
+/* 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .member {
+    order: -1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .search-form {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    width: 1200px;
+    margin: auto;
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+  }
+  .member {
+    font-size: 0;
+    text-align: right;
+  }
+  .member li{
+    display: inline-block;
+    background: yellow;
+    font-size: 16px;
+    width: 100px;
+    padding: 20px;
+  }
+}
