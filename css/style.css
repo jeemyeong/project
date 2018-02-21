@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css");
-
+@import url("fonts.css");
 /* 스타일 초기화 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,6 +28,10 @@ ul {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 /* 숨김 콘텐츠 */
 legend, .readable-hidden {
   background: yellow;
@@ -42,7 +46,16 @@ legend, .readable-hidden {
   overflow: hidden;
 }
 
-/* 레이아웃 */
+/* 기본 스타일 */
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Noto Sans";
+  font-size: 1.6rem;
+}
+
+/* 웃 */
 .container {
   background-color: silver;
 }
@@ -75,6 +88,9 @@ legend, .readable-hidden {
 
 /* 미디어 쿼리 */
 @media screen and (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
   .header {
     display: flex;
     flex-direction: column;
@@ -93,6 +109,7 @@ legend, .readable-hidden {
 @media screen and (min-width: 769px) {
   .header {
     width: 1200px;
+    height: 150px;
     margin: auto;
     position: relative;
   }
@@ -132,5 +149,40 @@ legend, .readable-hidden {
   }
   #search {
     width: calc(100% - 50px);
+  }
+  .navigation {
+    background: #988574;
+    border-top: 2px solid #181818;
+    border-bottom: 2px solid #181818;
+    padding: 1em 0;
+  }
+  .menubar-container {
+    display: none;
+  }
+  .main-menu {
+    width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-menu span {
+    font-size: 2rem;
+    font-family: "Noto Sans Bold";
+    text-shadow: 1px 0px 0 #000,
+                 0px 1px 0 #000,
+                 -1px 0px 0 #000,
+                 0px -1px 0 #000;
+  }
+  .main-menu span:hover, .main-menu li:focus span {
+    color: #ff0;
+    cursor: pointer;
+  }
+  .sub-menu {
+    margin: 1em 0 0 1em;
+  }
+  .sub-menu a:hover, .sub-menu a:focus {
+    color: #ff0;
+    outline: none;
   }
 }
