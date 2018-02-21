@@ -149,14 +149,14 @@ body {
   }
   .menubar-act .menubar-top {
     top: 50%;
-    transform: rotate(45deg) translateY(-50%);
+    transform: translateY(-50%) rotate(45deg);
   }
   .menubar-act .menubar-middle {
     transform: translate(-100%, -50%);
   }
   .menubar-act .menubar-bottom {
     top: 50%;
-    transform: rotate(-45deg) translateY(-50%);
+    transform: translateY(-50%) rotate(-45deg);
   }
 
   .main-menu {
